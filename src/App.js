@@ -28,7 +28,6 @@ class App extends Component {
     });
   }
 
-
   render(){
     const { characters } = this.state;
     const { value } = this.state;
@@ -38,7 +37,11 @@ class App extends Component {
       <h1>My Harry Potter Characters</h1>
       <input type="text" onChange={this.handleChange} name="" value={this.state.value}/>
       <ul>{
-        characters.map((personaje, index)=>{
+        characters.filter((personaje)=>{
+        return personaje.name.toLowerCase().includes(this.state.value.toLowerCase());
+        })
+
+        .map((personaje, index)=>{
           return(
             <div key={index}>
             <img src={personaje.image} alt={personaje.name}/>
