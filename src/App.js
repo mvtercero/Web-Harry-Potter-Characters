@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CharacterList from './components/CharacterList';
 
 class App extends Component {
   constructor (props) {
@@ -35,22 +36,7 @@ class App extends Component {
       <div className="App">
       <h1>My Harry Potter Characters</h1>
       <input className= "characterSearch" type="text" onChange={this.handleChange} name="" value={this.state.value}/>
-      <ul className="characterMenu">{
-        characters.filter((personaje)=>{
-          return personaje.name.toLowerCase().includes(this.state.value.toLowerCase());
-        })
-
-        .map((personaje, index)=>{
-          return(
-            <div className="characterCard" key={index}>
-            <li><h3>{personaje.name}</h3></li>
-            <img className="characterPhoto" src={personaje.image} alt={personaje.name}/>
-            <li><img className= "characterLogo" src={`images/${personaje.house}.png`} alt={personaje.house}/></li>
-            <li>{personaje.alive}</li>
-            </div>
-          );
-        })
-      }</ul>
+      <CharacterList characters= {characters} value= {value}/>
       </div>
     );
   }
