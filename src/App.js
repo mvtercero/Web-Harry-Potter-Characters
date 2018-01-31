@@ -45,7 +45,7 @@ class App extends Component {
             <div className="characterCard" key={index}>
             <li><h3>{personaje.name}</h3></li>
             <img className="characterPhoto" src={personaje.image} alt={personaje.name}/>
-            <li><img className= "characterLogo" src={`images/${personaje.house}.png`}/></li>
+            <li><img className= "characterLogo" src={`images/${personaje.house}.png`} alt={personaje.house}/></li>
             <li>{personaje.alive}</li>
             </div>
           );
