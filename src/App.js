@@ -35,7 +35,7 @@ class App extends Component {
     return(
       <div className="App">
       <h1>My Harry Potter Characters</h1>
-      <input className= "characterSearch" type="text" onChange={this.handleChange} name="" value={this.state.value}/>
+      <input className= "characterSearch" type="text" onChange={this.handleChange} value={this.state.value}/>
       <CharacterList characters= {characters} value= {value}/>
       </div>
     );

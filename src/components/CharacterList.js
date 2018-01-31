@@ -12,7 +12,7 @@ class CharacterList extends Component {
 
         .map((personaje, index)=>{
           return(
-            <Character personaje={personaje}  key={index}/>
+            <Character personaje={personaje} key={index}/>
           );
         })
       }</ul>
