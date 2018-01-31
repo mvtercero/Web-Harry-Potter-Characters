@@ -42,7 +42,7 @@ class App extends Component {
 
         .map((personaje, index)=>{
           return(
-            <div key={index}>
+            <div className="characterCard" key={index}>
             <li><h3>{personaje.name}</h3></li>
             <img className="characterPhoto" src={personaje.image} alt={personaje.name}/>
             <li><img className= "characterLogo" src={`images/${personaje.house}.png`}/></li>
