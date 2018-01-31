@@ -35,8 +35,8 @@ class App extends Component {
     return(
       <div className="App">
       <h1>My Harry Potter Characters</h1>
-      <input type="text" onChange={this.handleChange} name="" value={this.state.value}/>
-      <ul>{
+      <input className= "characterSearch" type="text" onChange={this.handleChange} name="" value={this.state.value}/>
+      <ul className="characterMenu">{
         characters.filter((personaje)=>{
         return personaje.name.toLowerCase().includes(this.state.value.toLowerCase());
         })
@@ -44,8 +44,8 @@ class App extends Component {
         .map((personaje, index)=>{
           return(
             <div key={index}>
-            <img src={personaje.image} alt={personaje.name}/>
             <li><h3>{personaje.name}</h3></li>
+            <img className="characterPhoto" src={personaje.image} alt={personaje.name}/>
             <li>House: {personaje.house}</li>
             <li>{personaje.alive}</li>
             </div>
