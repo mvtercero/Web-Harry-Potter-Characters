@@ -37,7 +37,7 @@ class App extends Component {
       <input className= "characterSearch" type="text" onChange={this.handleChange} name="" value={this.state.value}/>
       <ul className="characterMenu">{
         characters.filter((personaje)=>{
-        return personaje.name.toLowerCase().includes(this.state.value.toLowerCase());
+          return personaje.name.toLowerCase().includes(this.state.value.toLowerCase());
         })
 
         .map((personaje, index)=>{
@@ -45,7 +45,7 @@ class App extends Component {
             <div key={index}>
             <li><h3>{personaje.name}</h3></li>
             <img className="characterPhoto" src={personaje.image} alt={personaje.name}/>
-            <li>House: {personaje.house}</li>
+            <li><img className= "characterLogo" src={`images/${personaje.house}.png`}/></li>
             <li>{personaje.alive}</li>
             </div>
           );
