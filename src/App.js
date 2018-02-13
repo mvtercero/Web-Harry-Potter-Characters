@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CharacterList from './components/CharacterList';
+import Search from './components/Search';
 
 class App extends Component {
   constructor (props) {
@@ -35,7 +36,7 @@ class App extends Component {
     return(
       <div className="App">
       <h1>My Harry Potter Characters</h1>
-      <input className= "characterSearch" type="text" onChange={this.handleChange} value={this.state.value}/>
+      <Search onChange={this.handleChange} value={this.state.value}/>
       <CharacterList characters= {characters} value= {value}/>
       </div>
     );

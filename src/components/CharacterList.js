@@ -15,6 +15,7 @@ class CharacterList extends Component {
             <Character personaje={personaje} key={index}/>
           );
         })
+
       }</ul>
 
     );

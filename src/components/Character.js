@@ -8,6 +8,7 @@ class Character extends Component {
       <img className="characterPhoto" src={this.props.personaje.image} alt={this.props.personaje.name}/>
       <img className= "characterLogo" src={`images/${this.props.personaje.house}.png`} alt={this.props.personaje.house}/>
       <p> {this.props.personaje.alive ? "Alive ❤" : "Dead ☠"}</p>
+      <p> {this.props.personaje.hogwartsStudent ? "student" : ""}</p>
       </li>
     );
   }
